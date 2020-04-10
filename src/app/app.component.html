@@ -1,8 +1,15 @@
-<router-outlet></router-outlet>
+<header>EuroConsumer</header>
+
+
+<div class="content">
+  <router-outlet></router-outlet>
+</div>
 
 <div class="chat-container">
-  <button *ngIf="!active" (click)="showChat()" class="chat-container__help">Besoin s'aide ?</button>
+  <img *ngIf="!active" (click)="showChat()" src="../assets/icon-chatbot.png"/>
   <iframe (change)="resizeIframe($event)" (load)="resizeIframe($event)" [ngClass]="{'active': active === true}"
           *ngIf="active" src="https://boudetjonas.github.io/chatbotdemo/"></iframe>
 </div>
 
+
+<footer>Made with love</footer>

@@ -1,8 +1,24 @@
+body, html {
+  font-family: 'Lato', sans-serif;
+}
+
+div.content {
+  padding: 20px;
+}
+
+header {
+  width: 100%;
+  background-color: #ff8600;
+  padding: 10px;
+  font-family: 'Lato', sans-serif;
+  color: white;
+}
 
 .chat-container {
   position: fixed;
-  bottom: 0;
+  bottom: 40px;
   right: 0;
+  z-index: 1;
 }
 
 .chat-container iframe.active {
@@ -12,14 +28,24 @@
   border: none;
 }
 
-.chat-container__help {
-  background-color: #ff8600;
-  padding: 10px;
-  width: 100%;
-  color: white;
-  font-size: 16px;
-}
-
 ::ng-deep app-step1 + .chat-container {
   display: none;
+}
+
+
+img {
+  width: 70px;
+  height: auto;
+  margin-right: 10px;
+}
+
+footer {
+  background-color: #0AA7C8;
+  color: white;
+  width: 100%;
+  font-family: 'Lato', sans-serif;
+  padding: 10px;
+  position: fixed;
+  bottom: 0;
+  z-index: 0;
 }
