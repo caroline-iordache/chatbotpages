@@ -1,4 +1,8 @@
 <router-outlet></router-outlet>
 
-<iframe src="https://boudetjonas.github.io/chatbotdemo/"></iframe>
+<div class="chat-container">
+  <button *ngIf="!active" (click)="showChat()" class="chat-container__help">Besoin s'aide ?</button>
+  <iframe (change)="resizeIframe($event)" (load)="resizeIframe($event)" [ngClass]="{'active': active === true}"
+          *ngIf="active" src="https://boudetjonas.github.io/chatbotdemo/"></iframe>
+</div>
 

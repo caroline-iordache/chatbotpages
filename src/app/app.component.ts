@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import {Component} from '@angular/core';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +7,13 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'chatbotpages';
+  active;
+
+  showChat() {
+    this.active = true;
+  }
+
+  resizeIframe(obj) {
+    obj.path[0].style.height = obj.path[1].style.height + 'px';
+  }
 }
