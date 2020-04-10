@@ -13,6 +13,11 @@ export class AppComponent {
     this.active = true;
   }
 
+  closeChat() {
+    this.active = false;
+  }
+
+
   resizeIframe(obj) {
     //obj.path[0].style.height = obj.path[1].style.height + 'px';
   }

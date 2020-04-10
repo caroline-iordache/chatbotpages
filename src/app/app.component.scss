@@ -21,13 +21,45 @@ header {
   z-index: 1;
 }
 
-.chat-container iframe.active {
-  position: fixed;
-  bottom: 0;
-  right: 0;
-  border: none;
+.chat-container.active {
   height: 420px;
   width: 310px;
+}
+
+.chat-container iframe {
+  position: fixed;
+  bottom: 40px;
+  right: 0;
+  border: none;
+    animation-duration: 0.5s;
+  animation-name: slidein;
+  opacity: 0;
+  height: 0;
+  width: 0;
+}
+
+.openChat {
+  position: absolute;
+  top: -130px;
+  right: 30px;
+  width: 70px;
+  height: auto;
+}
+
+.closeChat {
+  position: absolute;
+  top: -110px;
+  right: 10px;
+  animation-duration: 0.5s;
+  animation-name: showButton;
+}
+
+.chat-container iframe.active {
+  height: 420px;
+  width: 310px;
+  opacity: 1;
+  animation-duration: 0.5s;
+//  animation-name: slideOff;
 }
 
 ::ng-deep app-step1 + .chat-container {
@@ -35,11 +67,43 @@ header {
 }
 
 
-img {
-  width: 70px;
-  height: auto;
-  margin-right: 10px;
-  margin-bottom: 40px;
+@keyframes showButton {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+
+@keyframes slidein {
+  from {
+    height: 0;
+    width: 0;
+    opacity: 0;
+  }
+
+  to {
+    height: 420px;
+    opacity: 1;
+    width: 310px;
+  }
+}
+
+
+@keyframes slideOff {
+  from {
+    height: 420px;
+    opacity: 1;
+    width: 310px;
+  }
+  to {
+    height: 0;
+    width: 0;
+    opacity: 0;
+  }
 }
 
 footer {
