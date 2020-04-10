@@ -1,0 +1,9 @@
+iframe {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+}
+
+::ng-deep app-step1 + iframe{
+  display: none;
+}
