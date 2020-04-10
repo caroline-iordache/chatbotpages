@@ -14,8 +14,6 @@ export class AppComponent {
   }
 
   resizeIframe(obj) {
-    obj.path[0].style.height = obj.path[1].style.height + 'px';
-    console.log(obj.path[1].style.height);
-    console.log(obj);
+    //obj.path[0].style.height = obj.path[1].style.height + 'px';
   }
 }

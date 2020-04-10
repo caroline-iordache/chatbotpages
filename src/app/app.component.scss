@@ -16,7 +16,7 @@ header {
 
 .chat-container {
   position: fixed;
-  bottom: 40px;
+  bottom: 0px;
   right: 0;
   z-index: 1;
 }
@@ -26,6 +26,8 @@ header {
   bottom: 0;
   right: 0;
   border: none;
+  height: 420px;
+  width: 310px;
 }
 
 ::ng-deep app-step1 + .chat-container {
@@ -37,6 +39,7 @@ img {
   width: 70px;
   height: auto;
   margin-right: 10px;
+  margin-bottom: 40px;
 }
 
 footer {
