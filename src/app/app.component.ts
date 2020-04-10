@@ -8,13 +8,16 @@ import {Component} from '@angular/core';
 export class AppComponent {
   title = 'chatbotpages';
   active;
+  inactive = false;
 
   showChat() {
     this.active = true;
+    this.inactive = !this.active;
   }
 
   closeChat() {
     this.active = false;
+    this.inactive = !this.active;
   }
 
 

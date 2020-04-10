@@ -26,17 +26,6 @@ header {
   width: 310px;
 }
 
-.chat-container iframe {
-  position: fixed;
-  bottom: 40px;
-  right: 0;
-  border: none;
-    animation-duration: 0.5s;
-  animation-name: slidein;
-  opacity: 0;
-  height: 0;
-  width: 0;
-}
 
 .openChat {
   position: absolute;
@@ -54,18 +43,32 @@ header {
   animation-name: showButton;
 }
 
+.chat-container iframe {
+  position: fixed;
+  bottom: 40px;
+  right: 0;
+  border: none;
+  opacity: 0;
+  height: 0;
+  width: 0;
+}
+
+.chat-container iframe.inactive {
+  animation-duration: 0.5s;
+  animation-name: slideOff;
+}
+
 .chat-container iframe.active {
   height: 420px;
   width: 310px;
   opacity: 1;
   animation-duration: 0.5s;
-//  animation-name: slideOff;
+  animation-name: slidein;
 }
 
 ::ng-deep app-step1 + .chat-container {
   display: none;
 }
-
 
 @keyframes showButton {
   from {
